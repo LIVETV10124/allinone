@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Stream with Custom Player</title>
+
+    <!-- JW Player Library -->
+    <script src="https://cdn.jwplayer.com/librariesKB5zFt7A.js"></script> <!-- Replace with your actual JW Player library ID -->
+
+    <!-- Custom Player CSS -->
+    <link rel="stylesheet" href="https://drmlive.au/jiocinema/player.css">
+</head>
+<body>
+    <h1>Live Stream with Custom Player</h1>
+    <!-- Player Container -->
+    <div id="myPlayer" class="custom-player"></div> <!-- Apply your custom styles via CSS class -->
+
+    <script>
+        // Initialize JW Player
+        jwplayer("myPlayer").setup({
+            file: "http://port.denver1769.in/tp3.php?tv=11154", // Your PHP live stream URL
+            image: "https://via.placeholder.com/1920x1080", // Thumbnail or poster image (optional)
+            width: "100%", // Player width
+            aspectratio: "16:9", // Aspect ratio for responsive design
+            autostart: true, // Automatically start playing
+            mute: false // Start unmuted
+        });
+
+        // Apply custom CSS styles dynamically if needed
+        document.querySelector("#myPlayer").classList.add("custom-player");
+    </script>
+</body>
+</html>
